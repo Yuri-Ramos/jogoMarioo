@@ -17,6 +17,15 @@
     position: absolute;
     bottom: 0;
     width: 80px;
+    
+    animation: pipe-animation 2s infinite linear;
+   
+}
+
+.clouds {
+    position: relative ;
+    bottom: 0;
+    width: 150px;
     animation: pipe-animation 2s infinite linear;
    
 }
@@ -25,17 +34,30 @@
  position: absolute;
  bottom: 0;
 }
+.jump {
+    animation: jump 500ms ease-out infinite;
 
+}
 
 @keyframes pipe-animation {
-    form{
+    from{
         rigth:-80px;
     
     }
     to {
-        right: 100%;
+        left: 100%;
     }
 
+}
+
+@keyframes clouds {
+from{
+    rigth:-80px;
+
+}
+    to{
+        left: 100%;
+    }
 }
 
 /* inicio 0
@@ -45,8 +67,14 @@ fim 0 */
     0% {	
      bottom: 0;
     }
+    40%{
+        bottom: 180px;
+    }
     50% {
     bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
     }
     100% {
     bottom: 0;
